@@ -1,0 +1,30 @@
+<view class="cart-page">
+  <!-- 空状态 -->
+  <view class="empty-cart" wx:if="{{cartList.length === 0}}">
+    <text class="empty-icon">🛒</text>
+    <text class="empty-text">购物车空空如也</text>
+    <button class="go-shopping" bindtap="goShopping">去点餐</button>
+  </view>
+
+  <!-- 购物车列表 -->
+  <view class="cart-list" wx:else>
+    <view class="cart-item" wx:for="{{cartList}}" wx:key="id">
+      <image class="cart-image" src="{{item.dishImage || '/images/default_food.png'}}" mode="aspectFill" />
+      <view class="cart-info">
+        <text class="cart-name">{{item.dishName}}</text>
+        <text class="cart-price">¥{{item.dishPrice}}</text>
+        <view class="quantity-control">
+          <text class="qty-btn" bindtap="decrease" data-id="{{item.id}}">-</text>
+          <text class="qty-num">{{item.quantity}}</text>
+          <text class="qty-btn" bindtap="increase" data-id="{{item.id}}">+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部结算 -->
+  <view class="cart-footer" wx:if="{{cartList.length > 0}}">
+    <text class="total">合计：<text class="price">¥{{totalPrice}}</text></text>
+    <button class="checkout-btn" bindtap="checkout">去结算</button>
+  </view>
+</view>

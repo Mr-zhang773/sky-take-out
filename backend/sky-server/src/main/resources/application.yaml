@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: sky-take-out
+  datasource:
+    url: jdbc:mysql://localhost:3306/worker?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  data:
+      redis:
+        host: localhost        # WSL 中 localhost 指向 Windows 主机
+        port: 6379
+        password:              # 没有密码就留空
+        database: 0
+        timeout: 5000
+        lettuce:
+          pool:
+            max-active: 8
+            max-idle: 8
+            min-idle: 0
+            max-wait: -1
+server:
+  port: 8083
+
+logging:
+  level:
+    org.springframework.boot.context.config: DEBUG
+    org.springframework.boot.context.properties: DEBUG
+mybatis-plus:
+  configuration:
+    # 开启驼峰命名自动映射（默认就是 true）
+    map-underscore-to-camel-case: true
+    # 打印 SQL 日志（开发阶段建议开启）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 主键类型：自动（雪花算法）
+      id-type: auto
+      # 逻辑删除字段名
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+sky:
+  jwt:
+    secret: sky-take-out-secret-key-2026-spring-boot-jwt-secret
+    ttl: 3600000
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+wechat:
+  appid: wxca1094cf6b42edee    # 你自己的 AppID
+  secret: 7fe4355b521d3ef841b557b3f0125cf0        # 你自己的 AppSecret

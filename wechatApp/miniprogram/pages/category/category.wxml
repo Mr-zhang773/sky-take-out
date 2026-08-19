@@ -1,0 +1,87 @@
+<view class="category-page">
+
+<!-- 左侧分类 -->
+<scroll-view class="left-menu" scroll-y>
+  <view
+    class="menu-item {{currentCategory === item.id ? 'active' : ''}}"
+    wx:for="{{categoryList}}"
+    wx:key="id"
+    bindtap="switchCategory"
+    data-id="{{item.id}}"
+  >
+    {{item.categoryName}}
+  </view>
+</scroll-view>
+
+<!-- 右侧菜品列表 -->
+<scroll-view
+  class="right-content"
+  scroll-y
+  scroll-into-view="{{scrollIntoView}}"
+  bindscroll="onScroll"
+  scroll-with-animation
+>
+  <!-- 按分类分组 -->
+  <view wx:for="{{categoryList}}" wx:key="id">
+  
+    <!-- 该分类下的菜品 -->
+    <view
+      class="dish-item"
+      wx:for="{{item.dishes}}"
+      wx:for-item="dish"
+      wx:key="id"
+    >
+      <image class="dish-image" src="{{dish.dishImage || '/images/default_food.png'}}" mode="aspectFill" />
+      <view class="dish-info">
+        <text class="dish-name">{{dish.dishName}}</text>
+        <text class="dish-price">¥{{dish.dishPrice}}</text>
+      </view>
+      <view class="add-btn" bindtap="addToCart" data-id="{{dish.id}}">+</view>
+    </view>
+  </view>
+  <view class="empty-tip" wx:if="{{dishList.length === 0}}">暂无菜品</view>
+</scroll-view>
+
+<!-- 底部购物车 -->
+<view class="cart-bar">
+  <view class="cart-left" bindtap="showCartPopup">
+    <view class="cart-icon-wrapper">
+      <text class="cart-icon">🛒</text>
+      <text class="cart-badge" wx:if="{{cartCount > 0}}">{{cartCount}}</text>
+    </view>
+    <text class="cart-total">¥{{cartTotal}}</text>
+  </view>
+  <view class="cart-right" bindtap="checkout">
+    <text>去结算</text>
+  </view>
+</view>
+
+</view>
+
+<!-- 购物车弹窗 -->
+<view class="cart-popup-mask" wx:if="{{showCartPopup}}" bindtap="closeCartPopup"></view>
+<view class="cart-popup {{showCartPopup ? 'active' : ''}}">
+  <view class="popup-header">
+    <text class="popup-title">购物车</text>
+    <text class="popup-close" bindtap="closeCartPopup">✕</text>
+  </view>
+
+  <scroll-view class="popup-body" scroll-y>
+    <view class="popup-empty" wx:if="{{cart.length === 0}}">购物车是空的</view>
+    <view class="popup-item" wx:for="{{cart}}" wx:key="id">
+      <image class="popup-image" src="{{item.dishImage || '/images/default_food.png'}}" mode="aspectFill" />
+      <text class="popup-name">{{item.dishName}}</text>
+      <view class="popup-control">
+        <text class="popup-btn" bindtap="decreaseQty" data-id="{{item.id}}">−</text>
+        <text class="popup-qty">{{item.quantity}}</text>
+        <text class="popup-btn" bindtap="increaseQty" data-id="{{item.id}}">+</text>
+      </view>
+      <text class="popup-price">¥{{item.dishPrice * item.quantity}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="popup-footer" wx:if="{{cart.length > 0}}">
+    <text class="popup-total">合计：¥{{cartTotal}}</text>
+    <button class="popup-checkout" bindtap="checkout">去结算</button>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+<view class="checkout-page">
+  <!-- 收货信息 -->
+  <view class="section">
+    <view class="section-title">收货信息</view>
+    <view class="form-group">
+      <text class="form-label">收货人</text>
+      <input class="form-input" placeholder="请输入姓名" bindinput="onNameInput" value="{{address.name}}" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">手机号</text>
+      <input class="form-input" placeholder="请输入手机号" bindinput="onPhoneInput" value="{{address.phone}}" type="number" />
+    </view>
+    <view class="form-group">
+      <text class="form-label">收货地址</text>
+      <input class="form-input" placeholder="请输入详细地址" bindinput="onAddressInput" value="{{address.detail}}" />
+    </view>
+  </view>
+
+  <!-- 订单明细 -->
+  <view class="section">
+    <view class="section-title">订单明细</view>
+    <view class="dish-item" wx:for="{{cartList}}" wx:key="id">
+      <image class="dish-img" src="{{item.dishImage || '/images/default_food.png'}}" mode="aspectFill" />
+      <view class="dish-info">
+        <text class="dish-name">{{item.dishName}}</text>
+        <text class="dish-price">¥{{item.dishPrice}}</text>
+      </view>
+      <text class="dish-qty">×{{item.quantity}}</text>
+    </view>
+  </view>
+
+  <!-- 费用明细 -->
+  <view class="section">
+    <view class="section-title">费用明细</view>
+    <view class="fee-row">
+      <text class="fee-label">商品小计</text>
+      <text class="fee-value">¥{{subtotal}}</text>
+    </view>
+    <view class="fee-row">
+      <text class="fee-label">打包费</text>
+      <text class="fee-value">¥{{packingFee}}</text>
+    </view>
+    <view class="fee-row">
+      <text class="fee-label">配送费</text>
+      <text class="fee-value">¥{{deliveryFee}}</text>
+    </view>
+    <view class="fee-row total-row">
+      <text class="fee-label">合计</text>
+      <text class="fee-value total-price">¥{{totalPrice}}</text>
+    </view>
+  </view>
+
+  <!-- 备注 -->
+  <view class="section">
+    <view class="section-title">备注</view>
+    <input class="remark-input" placeholder="选填，如：少辣、不要香菜" bindinput="onRemarkInput" />
+  </view>
+
+  <!-- 底部结算 -->
+  <view class="checkout-footer">
+    <view class="total-section">
+      <text class="total-label">实付</text>
+      <text class="total-price">¥{{totalPrice}}</text>
+    </view>
+    <button class="submit-btn" bindtap="submitOrder">提交订单</button>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="login-container">
+  <!-- 顶部装饰 -->
+  <view class="top-decoration">
+    <view class="circle circle-1"></view>
+    <view class="circle circle-2"></view>
+  </view>
+
+  <!-- 中间内容 -->
+  <view class="login-content">
+    <view class="logo-wrapper">
+      <image class="logo" src="/images/logo.png" mode="aspectFit" />
+    </view>
+    <text class="app-name">苍穹外卖</text>
+    <text class="app-slogan">优质美食，一键送达</text>
+
+    <button class="login-btn" bindtap="handleLogin">
+      <image class="wechat-icon" src="/images/wechat.png" mode="aspectFit" />
+      微信一键登录
+    </button>
+    <text class="login-tip">登录即代表同意《用户协议》和《隐私政策》</text>
+  </view>
+</view>

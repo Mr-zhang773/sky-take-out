@@ -1,0 +1,178 @@
+page {
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+.checkout-page {
+  padding: 20rpx;
+}
+
+.section {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  margin-bottom: 16rpx;
+}
+
+/* ===== 收货信息 ===== */
+.form-group {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.form-group:last-child {
+  border-bottom: none;
+}
+
+.form-label {
+  font-size: 28rpx;
+  color: #333;
+  width: 140rpx;
+  flex-shrink: 0;
+}
+
+.form-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+  padding: 8rpx 0;
+}
+
+/* ===== 订单明细 ===== */
+.dish-item {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.dish-item:last-child {
+  border-bottom: none;
+}
+
+.dish-img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 12rpx;
+  flex-shrink: 0;
+}
+
+.dish-info {
+  flex: 1;
+  padding: 0 20rpx;
+}
+
+.dish-name {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+}
+
+.dish-price {
+  font-size: 24rpx;
+  color: #FF6B35;
+}
+
+.dish-qty {
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* ===== 费用明细 ===== */
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 0;
+}
+
+.fee-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.fee-value {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.total-row {
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 16rpx;
+  margin-top: 4rpx;
+}
+
+.total-row .fee-label {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.total-price {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #FF6B35;
+}
+
+/* ===== 备注 ===== */
+.remark-input {
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  padding: 12rpx 0;
+}
+
+/* ===== 底部结算 ===== */
+.checkout-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.05);
+}
+
+.total-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.total-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.total-price {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #FF6B35;
+  margin-left: 10rpx;
+}
+
+.submit-btn {
+  background: #FF6B35;
+  color: #fff;
+  border-radius: 40rpx;
+  padding: 16rpx 60rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  border: none;
+}
+
+.submit-btn::after {
+  border: none;
+}

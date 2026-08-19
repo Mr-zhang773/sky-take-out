@@ -1,0 +1,45 @@
+<!-- 搜索栏 -->
+<view class="search-box">
+  <view class="search-input-wrapper">
+    <image class="search-icon" src="/images/search.png" mode="aspectFit" />
+    <input class="search-input" placeholder="搜索菜品..." bindinput="onSearch" />
+  </view>
+</view>
+
+<!-- 轮播图 -->
+<swiper class="banner-swiper" autoplay circular interval="3000">
+  <swiper-item wx:for="{{banners}}" wx:key="id">
+    <image class="banner-image" src="{{item.image}}" mode="aspectFill" />
+  </swiper-item>
+</swiper>
+
+<!-- 分类快捷入口 -->
+<view class="category-nav">
+  <view class="nav-item" wx:for="{{categoryList}}" wx:key="id" bindtap="goToCategory" data-id="{{item.id}}">
+    <image class="nav-icon" src="{{item.icon || '/images/food.png'}}" mode="aspectFit" />
+    <text class="nav-name">{{item.categoryName}}</text>
+  </view>
+</view>
+
+<!-- 推荐菜品标题 -->
+<view class="section-header">
+  <text class="section-title">🔥 推荐菜品</text>
+  <text class="section-more" bindtap="viewAllDishes">查看全部 ></text>
+</view>
+
+<!-- 菜品列表 -->
+<view class="dish-list">
+  <view class="dish-item" wx:for="{{dishList}}" wx:key="id">
+    <image class="dish-image" src="{{item.dishImage || '/images/default_food.png'}}" mode="aspectFill" />
+    <view class="dish-info">
+      <text class="dish-name">{{item.dishName}}</text>
+      <text class="dish-sales">月售 {{item.sales || 0}} 份</text>
+      <view class="dish-bottom">
+        <text class="dish-price">¥{{item.dishPrice}}</text>
+        <view class="add-cart-btn" bindtap="addToCart" data-id="{{item.id}}">
+          <text class="add-icon">+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

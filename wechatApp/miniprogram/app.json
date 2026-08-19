@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/category/category",
+    "pages/checkout/checkout"
+  ],
+  "window": {
+    "navigationBarTitleText": "苍穹外卖",
+    "navigationBarBackgroundColor": "#FF6B35",
+    "navigationBarTextStyle": "white"
+  }
+}
