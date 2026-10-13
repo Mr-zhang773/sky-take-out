@@ -3,7 +3,7 @@ package com.sky.controller.admin.impl;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.controller.admin.DishController;
 import com.sky.service.admin.DishService;
-import entity.Dish;
+import com.sky.entity.Dish;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import result.Result;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/admin")
 @Tag(name="菜品管理")
 public class DishControllerImpl implements DishController {
     @Autowired

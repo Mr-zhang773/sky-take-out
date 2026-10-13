@@ -3,7 +3,7 @@ package com.sky.service.admin.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.service.admin.EmployeeService;
-import entity.Employee;
+import com.sky.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.sky.mapper.EmployeeMapper;

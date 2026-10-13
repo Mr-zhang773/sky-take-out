@@ -1,7 +1,7 @@
 package com.sky.service.admin;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import entity.Dish;
+import com.sky.entity.Dish;
 
 public interface DishService {
     Page<Dish> selectPage(String dishName, Integer categoryId, Integer currentPage, Integer pageSize,Integer status);

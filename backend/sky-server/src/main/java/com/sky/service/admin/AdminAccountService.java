@@ -1,6 +1,6 @@
 package com.sky.service.admin;
 
-import entity.Admin;
+import com.sky.entity.Admin;
 
 public interface AdminAccountService {
     Integer adminRegister(Admin admin);

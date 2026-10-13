@@ -2,7 +2,7 @@ package com.sky.controller.user;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.service.user.UserDishService;
-import entity.Dish;
+import com.sky.entity.Dish;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

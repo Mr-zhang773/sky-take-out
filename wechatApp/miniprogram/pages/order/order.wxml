@@ -1,0 +1,223 @@
+<view class="container">
+
+
+<!-- 没有订单 -->
+<view 
+  wx:if="{{orderList.length===0}}"
+  class="empty">
+
+  暂无订单
+
+</view>
+
+
+
+<!-- 订单列表 -->
+
+<view
+  wx:for="{{orderList}}"
+  wx:key="orderNo"
+  class="order-card">
+
+
+  <!-- 订单头 -->
+  <view class="order-header">
+
+
+    <view>
+
+      <text class="order-title">
+        订单编号
+      </text>
+
+      <text>
+        {{item.orderNo}}
+      </text>
+
+    </view>
+
+
+
+    <text class="status">
+      {{item.status}}
+    </text>
+
+
+  </view>
+
+
+
+  <!-- 时间 -->
+
+  <view class="time">
+
+    下单时间：
+    {{item.createTime}}
+
+  </view>
+
+
+
+
+  <!-- 菜品 -->
+
+  <view class="dish-list">
+
+
+    <view
+      wx:for="{{item.orderDetails}}"
+      wx:key="dishName"
+      class="dish-item">
+
+
+      <image
+        class="dish-img"
+        src="{{item.dishImage || '/images/default_food.png'}}">
+      </image>
+
+
+
+      <view class="dish-info">
+
+
+        <view class="dish-name">
+
+          {{item.dishName}}
+
+        </view>
+
+
+
+        <view class="dish-price">
+
+
+          ￥{{item.dishPrice}}
+
+          ×
+
+          {{item.dishQuantity}}
+
+
+        </view>
+
+
+      </view>
+
+
+
+    </view>
+
+
+  </view>
+
+
+
+
+  <!-- 收货信息 -->
+
+  <view class="address">
+
+
+    <view>
+
+      收货人：
+      {{item.consigneeName}}
+
+    </view>
+
+
+    <view>
+
+      电话：
+      {{item.consigneePhone}}
+
+    </view>
+
+
+    <view>
+
+      地址：
+      {{item.consigneeAddress}}
+
+    </view>
+
+
+  </view>
+
+
+
+  <!-- 备注 -->
+
+  <view 
+    wx:if="{{item.remark}}"
+    class="remark">
+
+
+    备注：
+    {{item.remark}}
+
+
+  </view>
+
+
+
+
+  <!-- 金额 -->
+
+  <view class="bottom">
+
+
+    <text>
+
+      共{{item.orderDetails.length}}件商品
+
+    </text>
+
+
+    <text class="total">
+
+      ￥{{item.totalPrice}}
+
+    </text>
+
+
+  </view>
+
+
+
+</view>
+
+
+
+<!-- 底部导航 -->
+
+<view class="bottom-nav">
+
+
+  <view
+    class="nav-item"
+    bindtap="goCategory">
+
+    🍽 点餐
+
+  </view>
+
+
+
+  <view
+    class="nav-item active"
+    bindtap="goOrder">
+
+
+    📋 订单
+
+
+  </view>
+
+
+
+</view>
+
+
+
+</view>

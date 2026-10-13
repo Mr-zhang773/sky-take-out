@@ -3,11 +3,8 @@ package com.sky.mapper;
 import com.sky.annotation.AutoFill;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import entity.Employee;
-import entity.Admin;
+import com.sky.entity.Employee;
 import org.apache.ibatis.annotations.*;
-
-import java.util.List;
 
 @Mapper
 public interface EmployeeMapper extends BaseMapper<Employee> {

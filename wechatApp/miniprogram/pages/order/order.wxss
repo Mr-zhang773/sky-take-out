@@ -1,0 +1,252 @@
+.container{
+
+  padding:20rpx;
+
+  background:#f5f5f5;
+
+  min-height:100vh;
+
+  padding-bottom:120rpx;
+
+}
+
+
+
+/* 空状态 */
+
+.empty{
+
+  text-align:center;
+
+  margin-top:300rpx;
+
+  color:#999;
+
+}
+
+
+
+
+.order-card{
+
+  background:white;
+
+  border-radius:20rpx;
+
+  padding:25rpx;
+
+  margin-bottom:25rpx;
+
+}
+
+
+
+/* 头部 */
+
+.order-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  border-bottom:1rpx solid #eee;
+
+  padding-bottom:20rpx;
+
+}
+
+
+.order-title{
+
+  color:#888;
+
+  margin-right:15rpx;
+
+}
+
+
+.status{
+
+  color:#ff6b35;
+
+  font-weight:bold;
+
+}
+
+
+
+.time{
+
+  font-size:26rpx;
+
+  color:#999;
+
+  margin:20rpx 0;
+
+}
+
+
+
+
+/* 菜品 */
+
+.dish-item{
+
+  display:flex;
+
+  margin-bottom:20rpx;
+
+}
+
+
+
+.dish-img{
+
+  width:120rpx;
+
+  height:120rpx;
+
+  border-radius:15rpx;
+
+}
+
+
+
+.dish-info{
+
+  margin-left:20rpx;
+
+}
+
+
+
+.dish-name{
+
+  font-size:32rpx;
+
+  font-weight:bold;
+
+}
+
+
+
+.dish-price{
+
+  margin-top:20rpx;
+
+  color:#666;
+
+}
+
+
+
+
+
+.address{
+
+  margin-top:20rpx;
+
+  padding-top:20rpx;
+
+  border-top:1rpx solid #eee;
+
+  line-height:50rpx;
+
+  color:#555;
+
+}
+
+
+
+.remark{
+
+  margin-top:20rpx;
+
+  background:#fff7e6;
+
+  padding:15rpx;
+
+  border-radius:10rpx;
+
+  color:#996600;
+
+}
+
+
+
+
+.bottom{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-top:25rpx;
+
+  font-size:30rpx;
+
+}
+
+
+
+.total{
+
+  color:#ff4d00;
+
+  font-size:40rpx;
+
+  font-weight:bold;
+
+}
+
+
+
+
+
+/* 底部导航 */
+
+.bottom-nav{
+
+  position:fixed;
+
+  bottom:0;
+
+  left:0;
+
+  right:0;
+
+  height:100rpx;
+
+  background:white;
+
+  display:flex;
+
+  border-top:1rpx solid #ddd;
+
+}
+
+
+
+.nav-item{
+
+  flex:1;
+
+  text-align:center;
+
+  line-height:100rpx;
+
+  color:#666;
+
+}
+
+
+
+.active{
+
+  color:#ff6b35;
+
+  font-weight:bold;
+
+}

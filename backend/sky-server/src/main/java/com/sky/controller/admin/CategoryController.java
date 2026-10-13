@@ -1,8 +1,7 @@
 package com.sky.controller.admin;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import entity.Category;
-import entity.Employee;
+import com.sky.entity.Category;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

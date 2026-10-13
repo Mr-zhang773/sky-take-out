@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.sky.mapper")
-public class    SkyTakeOutApplication {
+public class     SkyTakeOutApplication {
     public static void main(String[] args) {
         SpringApplication.run(SkyTakeOutApplication.class, args)
         ;

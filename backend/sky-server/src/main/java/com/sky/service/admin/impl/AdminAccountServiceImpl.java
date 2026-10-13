@@ -3,7 +3,7 @@
     import com.sky.mapper.AdminAccountMapper;
     import com.sky.service.admin.AdminAccountService;
     import com.sky.utils.JwtUtil;
-    import entity.Admin;
+    import com.sky.entity.Admin;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.stereotype.Service;
 

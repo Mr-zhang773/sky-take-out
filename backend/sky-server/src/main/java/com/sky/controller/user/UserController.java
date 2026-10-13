@@ -1,6 +1,6 @@
 package com.sky.controller.user;
 
-import com.sky.dto.LoginDTO;
+import com.sky.LoginDTO;
 import com.sky.service.user.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

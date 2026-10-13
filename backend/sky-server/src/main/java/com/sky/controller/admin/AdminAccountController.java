@@ -1,6 +1,6 @@
 package com.sky.controller.admin;
 
-import entity.Admin;
+import com.sky.entity.Admin;
 import org.springframework.web.bind.annotation.RequestBody;
 import result.Result;
 

@@ -1,10 +1,14 @@
 package com.sky.service.user;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-import entity.Order;
+import com.sky.dto.user.OrderDto;
+import com.sky.vo.user.OrderVO;
 
-public interface UserOrderService extends IService<Order> {
-    // 未来如果有特殊的订单业务方法，在这里定义
-    // 比如：void cancelOrder(Long orderId);
-    // 比如：List<Order> getMyOrders(Integer userId);
+import java.util.List;
+
+public interface UserOrderService {
+
+    void createOrder(OrderDto orderDto);
+
+    List<OrderVO> getUserOrders();
+
 }

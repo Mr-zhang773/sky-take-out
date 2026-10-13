@@ -1,7 +1,7 @@
 package com.sky.service.admin;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import entity.Employee;
+import com.sky.entity.Employee;
 
 public interface EmployeeService {
     Integer addEmployee(Employee employee);

@@ -1,7 +1,7 @@
 package com.sky.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import entity.WechatUser;
+import com.sky.entity.WechatUser;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

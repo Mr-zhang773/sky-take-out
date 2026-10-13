@@ -1,7 +1,7 @@
 package com.sky.aspect;
 
-import entity.Category;
-import entity.Employee;
+import com.sky.entity.Category;
+import com.sky.entity.Employee;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

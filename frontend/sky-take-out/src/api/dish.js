@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 分页查询
 export function getDishPage(params) {
   return request({
-    url: '/dish/list',
+    url: '/admin/dish/list',
     method: 'get',
     params
   })
@@ -12,7 +12,7 @@ export function getDishPage(params) {
 // 添加菜品
 export function addDish(data) {
   return request({
-    url: '/dish/add',
+    url: '/admin/dish/add',
     method: 'post',
     data
   })
@@ -21,7 +21,7 @@ export function addDish(data) {
 // 修改菜品
 export function updateDish(data) {
   return request({
-    url: '/dish/update',
+    url: '/admin/dish/update',
     method: 'put',
     data
   })
@@ -30,7 +30,7 @@ export function updateDish(data) {
 // 删除菜品
 export function deleteDish(id) {
   return request({
-    url: `/dish/${id}`,
+    url: `/admin/dish/${id}`,
     method: 'delete'
   })
 }
@@ -38,7 +38,7 @@ export function deleteDish(id) {
 // 切换状态（停售/起售）
 export function toggleDishStatus(id, status) {
   return request({
-    url: `/dish/${id}/status`,
+    url: `/admin/dish/${id}/status`,
     method: 'put',
     data: { status }
   })

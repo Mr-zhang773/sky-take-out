@@ -1,6 +1,6 @@
 package com.sky.controller.admin;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import entity.Employee;
+import com.sky.entity.Employee;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import result.Result;

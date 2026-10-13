@@ -1,7 +1,7 @@
 package com.sky.controller.user;
 
 import com.sky.service.user.UserCategoryService;
-import entity.Category;
+import com.sky.entity.Category;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

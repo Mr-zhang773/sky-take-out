@@ -1,7 +1,7 @@
 package com.sky.service.admin;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import entity.Category;
+import com.sky.entity.Category;
 
 import java.util.List;
 

@@ -2,11 +2,39 @@
   "pages": [
     "pages/login/login",
     "pages/category/category",
+    "pages/order/order",
     "pages/checkout/checkout"
   ],
+
   "window": {
     "navigationBarTitleText": "苍穹外卖",
     "navigationBarBackgroundColor": "#FF6B35",
     "navigationBarTextStyle": "white"
+  },
+
+
+  "tabBar": {
+
+    "color": "#666666",
+
+    "selectedColor": "#FF6B35",
+
+    "backgroundColor": "#ffffff",
+
+    "list": [
+
+      {
+        "pagePath": "pages/category/category",
+        "text": "点餐"
+      },
+
+      {
+        "pagePath": "pages/order/order",
+        "text": "历史订单"
+      }
+
+    ]
+
   }
+
 }

@@ -9,11 +9,12 @@ export function getOrderList(params) {
   })
 }
 
-// 更新订单状态
 export function updateOrderStatus(id, status) {
   return request({
     url: `/admin/order/status/${id}`,
     method: 'put',
-    params: { status }
+    data: {
+      status
+    }
   })
 }

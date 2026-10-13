@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // 创建一个独立的 axios 实例
 const service = axios.create({
-  baseURL: 'http://localhost:8083/api',          // 基础路径，所有请求都会自动加上 /api
+  baseURL: 'http://localhost:8083',          // 基础路径，所有请求都会自动加上 /api
   timeout: 5000             // 超时时间
 })
 

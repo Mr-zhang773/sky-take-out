@@ -3,7 +3,7 @@ package com.sky.service.admin.impl;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.mapper.DishMapper;
 import com.sky.service.admin.DishService;
-import entity.Dish;
+import com.sky.entity.Dish;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

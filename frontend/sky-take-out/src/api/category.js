@@ -1,9 +1,8 @@
 import request from '@/utils/request'
-
 // 分页查询
 export function getCategoryPage(params) {
   return request({
-    url: '/category/list',
+    url: '/admin/category/list',
     method: 'get',
     params
   })
@@ -12,7 +11,7 @@ export function getCategoryPage(params) {
 // 添加分类
 export function addCategory(data) {
   return request({
-    url: '/category/add',
+    url: 'admin//category/add',
     method: 'post',
     data
   })
@@ -21,7 +20,7 @@ export function addCategory(data) {
 // 修改分类
 export function updateCategory(data) {
   return request({
-    url:'http://localhost:8083/api/category/update',
+    url:'/admin/category/update',
     method: 'put',
     data
   })
@@ -30,7 +29,7 @@ export function updateCategory(data) {
 // 删除分类
 export function deleteCategory(id) {
   return request({
-    url: `/category/${id}`,
+    url: `/admin/category/${id}`,
     method: 'delete'
   })
 }
@@ -38,7 +37,7 @@ export function deleteCategory(id) {
 // 切换状态
 export function toggleCategoryStatus(id, status) {
   return request({
-    url: `/category/${id}/status`,
+    url: `/admin/category/${id}/status`,
     method: 'put',
     data: { status }
   })
@@ -46,7 +45,7 @@ export function toggleCategoryStatus(id, status) {
 // 获取所有分类（不分页）
 export function getCategoryList() {
   return request({
-    url: '/category/all',
+    url: '/admin/category/all',
     method: 'get'
   })
 }

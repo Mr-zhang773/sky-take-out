@@ -62,6 +62,6 @@
       <text class="total-label">实付</text>
       <text class="total-price">¥{{totalPrice}}</text>
     </view>
-    <button class="submit-btn" bindtap="submitOrder">提交订单</button>
+    <button class="submit-btn" bindtap="submitOrder" disabled="{{submitting}}"> {{submitting?'提交中...':'提交订单'}}</button>
   </view>
 </view>

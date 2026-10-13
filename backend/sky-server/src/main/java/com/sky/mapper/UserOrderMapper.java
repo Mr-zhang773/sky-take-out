@@ -1,7 +1,7 @@
 package com.sky.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import entity.Order;
+import com.sky.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

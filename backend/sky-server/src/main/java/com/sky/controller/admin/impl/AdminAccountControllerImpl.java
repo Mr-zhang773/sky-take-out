@@ -2,7 +2,7 @@ package com.sky.controller.admin.impl;
 
 import com.sky.controller.admin.AdminAccountController;
 import com.sky.service.admin.AdminAccountService;
-import entity.Admin;
+import com.sky.entity.Admin;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

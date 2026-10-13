@@ -1,6 +1,6 @@
 package com.sky.service.user;
 
-import entity.Category;
+import com.sky.entity.Category;
 
 import java.util.List;
 

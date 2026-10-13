@@ -3,7 +3,7 @@ package com.sky.controller.admin.impl;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.controller.admin.EmployeeController;
 import com.sky.service.admin.EmployeeService;
-import entity.Employee;
+import com.sky.entity.Employee;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import result.Result;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/admin")
 @Tag(name="员工信息管理")
 public class EmployeeControllerImpl implements EmployeeController {
     @Autowired

@@ -3,7 +3,7 @@ package com.sky.controller.admin.impl;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.controller.admin.CategoryController;
 import com.sky.service.admin.CategoryService;
-import entity.Category;
+import com.sky.entity.Category;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import result.Result;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/admin")
 @Tag(name="分类管理")
 public class CategoryControllerImpl implements CategoryController {
   @Autowired

@@ -3,7 +3,7 @@ package com.sky.service.user.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.sky.mapper.CategoryMapper;
 import com.sky.service.user.UserCategoryService;
-import entity.Category;
+import com.sky.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
